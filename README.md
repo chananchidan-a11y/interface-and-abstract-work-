@@ -1,8 +1,10 @@
+# Training System
+
+## Class Diagram
+
+```mermaid
 classDiagram
 
-%% =========================
-%% Abstract Class
-%% =========================
 class User {
     <<abstract>>
     - firstName : string
@@ -12,9 +14,6 @@ class User {
     + ShowInfo() : void
 }
 
-%% =========================
-%% Interfaces
-%% =========================
 class IMember {
     <<interface>>
     + RegisterCourse() : void
@@ -26,9 +25,6 @@ class ITrainer {
     + ApproveResult() : void
 }
 
-%% =========================
-%% Classes
-%% =========================
 class Student {
     - studentId : string
     - major : string
@@ -54,10 +50,6 @@ class Guest {
     + ShowInfo() : void
 }
 
-%% =========================
-%% Relationships
-%% =========================
-
 User <|-- Student
 User <|-- Teacher
 User <|-- Guest
@@ -68,3 +60,4 @@ IMember <|.. Guest
 
 ITrainer <|.. Teacher
 ITrainer <|.. Guest
+```
